@@ -1,0 +1,51 @@
+.bg-custom {
+  background-color: #3f51b5;
+}
+.navbar .nav-item:hover .nav-link {
+  background-color: white;
+  color: #3f51b5;
+  border-radius: 10px;
+}
+
+.tooltip-custom {
+  position: relative;
+  display: inline-block;
+}
+
+.text-success:hover {
+  text-decoration: none;
+}
+
+.tooltip-custom .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #366dee; /* Custom background color */
+  color: #fff; /* Text color */
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  right: 150%; /* Position the tooltip above the icon */
+  left: 250%;
+  margin-left: -50px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-weight: bold; /* Bold text */
+}
+
+.tooltip-custom .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fefefe transparent transparent transparent; /* Arrow color matching the background */
+}
+
+.tooltip-custom:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
